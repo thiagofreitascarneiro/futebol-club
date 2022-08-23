@@ -5830,6 +5830,11 @@
     "@vue/compiler-sfc" "2.7.9"
     "csstype" "^3.1.0"
 
+"vue2-filters@^0.14.0":
+  "integrity" "sha512-2tFWC6gx1SVIr+6VXoufkL+bZa8Gn0/P09T/bnGjOEAGH1+eVT05bPm/VF2V/nL/HMyWkLdlvxKh9JNqpfFlyw=="
+  "resolved" "https://registry.npmjs.org/vue2-filters/-/vue2-filters-0.14.0.tgz"
+  "version" "0.14.0"
+
 "watchpack@^2.4.0":
   "integrity" "sha512-Lcvm7MGST/4fup+ifyKi2hjyIAwcdI4HRgtvTpIUxBRhB+RFtUh8XtDOxUfctVCnhVi+QQj49i91OyvzkJl6cg=="
   "resolved" "https://registry.npmjs.org/watchpack/-/watchpack-2.4.0.tgz"

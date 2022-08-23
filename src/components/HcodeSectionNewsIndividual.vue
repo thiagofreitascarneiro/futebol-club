@@ -4,26 +4,17 @@
 
         <div class="col-3">
 
-            <img src="../assets/news1.jpg" alt="Notícia 1">
+            <img :src="require('../assets/' + this.imgName)" :alt="imgInfo">
 
         </div>
 
         <div class="col-9">
 
-            <h2>Começam os treinos para a nova temporada</h2>
+            <h2>{{ newsTitle }}</h2>
 
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Cumque voluptate soluta debitis perferendis totam eius 
-                aliquam voluptatum minus sequi atque! Magnam quas incidunt 
-                eveniet eius doloremque tempora repudiandae, eos unde. Lorem 
-                ipsum dolor sit amet consectetur adipisicing elit. Esse quam praesentium 
-                 perspiciatis cum nisi quisquam, saepe unde cumque 
-                 accusamus 
-                 quod ullam autem, iste pariatur in, impedit 
-                 maiores magnam recusandae tempora.
-            </p>
+            <p>{{ newsContent | truncate(200) }}</p>
 
-            <span class="font-italic">01/01/2022</span>
+            <span class="font-italic"> {{ newsDate }} </span>
 
 
         </div>
@@ -35,6 +26,28 @@
 <script>
 
 export default {
+    props: {
+        imgName: {
+            type: String,
+            required: true
+        },
+        imgInfo: {
+           type: String,
+           required: true,
+        },
+        newsTitle: {
+            type: String,
+            required: true
+        },
+        newsContent: {
+            type: String,
+            required: true
+        },
+        newsDate: {
+            type: String,
+            required: true
+        }
+    }
     
 }
 </script>
