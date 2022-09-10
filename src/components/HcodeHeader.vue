@@ -17,6 +17,24 @@
                     <a href="" class="btn- mr-5">Times</a>
                     <a href="" class="btn- mr-5">Classificações</a>
 
+                    <select name="championship" id="select-championship"
+                    class="form-control" @change="$emit('select-championship', $event.target.value)">
+                        <option value=""> Selecione um Campeonato</option>
+                        <option value="Campeonato Brasileiro" selected> 
+                            Campeonato Brasileiro
+                        </option>
+                        <option value="Campeonato Espanhol"> 
+                            campeonato Espanhol
+                        </option>
+                        <option value="Campeonato Inglês"> 
+                            Campeonato Inglês
+                        </option>
+                        <option 
+                            value="Campeonato Italiano"> 
+                            Campeonato Italiano
+                        </option>
+                    </select>
+
                 </div>
                 
 
