@@ -10,9 +10,10 @@
 
         <div class="col-9">
 
-            <h2>{{ newsTitle }}</h2>
+            <slot name="title"></slot>
 
-            <p>{{ newsContent | truncate(200) }}</p>
+            <slot>Notícia Padrão</slot>
+            
 
             <span class="font-italic"> {{ newsDate }} </span>
 
@@ -34,14 +35,6 @@ export default {
         imgInfo: {
            type: String,
            required: true,
-        },
-        newsTitle: {
-            type: String,
-            required: true
-        },
-        newsContent: {
-            type: String,
-            required: true
         },
         newsDate: {
             type: String,
