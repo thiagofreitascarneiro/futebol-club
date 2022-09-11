@@ -9,10 +9,11 @@
         
         </div>
 
-        <HcodeSectionBanner />
+        <component :is="currentComponent">
 
-        <HcodeSectionNews />
+        </component>
 
+    
         <div class="container">
             <div class="row my-club mt-5">
 
@@ -46,11 +47,13 @@ export default {
     },
     data() {
         return {
-            myClub: 'Hcode Treinamentos'
+            myClub: 'Hcode Treinamentos',
+            
         }
     },
     props: {
-        championship: String
+        championship: String,
+        currentComponent: String,
     }
    
 }
