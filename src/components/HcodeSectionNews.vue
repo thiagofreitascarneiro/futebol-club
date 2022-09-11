@@ -5,50 +5,16 @@
         <div class="container">
             
             <HcodeSectionNewsIndividual 
-                img-name="news1.jpg"
-                img-info="Notícia 1"
-                news-title="Começam os treinos para a nova temporada"
-                news-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Cumque voluptate soluta debitis perferendis totam eius 
-                aliquam voluptatum minus sequi atque! Magnam quas incidunt 
-                eveniet eius doloremque tempora repudiandae, eos unde. Lorem 
-                ipsum dolor sit amet consectetur adipisicing elit. Esse quam praesentium 
-                perspiciatis cum nisi quisquam, saepe unde cumque 
-                accusamus 
-                quod ullam autem, iste pariatur in, impedit 
-                maiores magnam recusandae tempora."
-                news-date="01/01/2020"
+                v-for="notice in news"
+                :key="notice.id"
+                :img-name="notice.img"
+                :img-info="notice.imgInfo"
+                :news-title="notice.title"
+                :news-content="notice.content"
+                :news-date="notice.date"
             />
 
-            <HcodeSectionNewsIndividual 
-             img-name="news2.jpg"
-                img-info="Notícia 2"
-                news-title="Jogo de quarta-feira termina empatado"
-                news-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Cumque voluptate soluta debitis perferendis totam eius 
-                aliquam voluptatum minus sequi atque! Magnam quas incidunt 
-                eveniet eius doloremque tempora repudiandae, eos unde. Lorem 
-                ipsum dolor sit amet consectetur adipisicing elit. Esse quam praesentium 
-                perspiciatis cum nisi quisquam, saepe unde cumque 
-                accusamus 
-                quod ullam autem, iste pariatur in, impedit 
-                maiores magnam recusandae tempora."
-                news-date="07/01/2020"/>
-
-            <HcodeSectionNewsIndividual 
-             img-name="news3.jpg"
-                img-info="Notícia 3"
-                news-title="A inauguração do novo estádio será na semana que vem"
-                news-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Cumque voluptate soluta debitis perferendis totam eius 
-                aliquam voluptatum minus sequi atque! Magnam quas incidunt 
-                eveniet eius doloremque tempora repudiandae, eos unde. Lorem 
-                ipsum dolor sit amet consectetur adipisicing elit. Esse quam praesentium 
-                perspiciatis cum nisi quisquam, saepe unde cumque 
-                accusamus 
-                quod ullam autem, iste pariatur in, impedit 
-                maiores magnam recusandae tempora."
-                news-date="20/01/2020"/>
+           
 
         </div>
 
@@ -63,6 +29,38 @@ import HcodeSectionNewsIndividual from './HcodeSectionNewsIndividual.vue'
 export default {
     components: {
         HcodeSectionNewsIndividual
+    },
+    data() {
+        return {
+            news:[]
+        }
+    },
+    created() {
+        this.news = [{
+            id: 1,
+            title: 'Começam os treinos para a nova temporada',
+            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Cumque voluptate soluta debitis perferendis totam eius aliquam voluptatum minus sequi atque! Magnam quas incidunt eveniet eius doloremque tempora repudiandae, eos unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quam praesentium ipsum dolor sit amet consectetur adipisicing elit.Cumque ipsum dolor sit amet consectetur adipisicing elit.Cumque ipsum dolor sit amet consectetur adipisicing elit.Cumque', 
+            date: '2020-01-01',
+            img:'news1.jpg',
+            imgInfo: 'Notícia 1'
+        },
+        {
+            id: 2,
+            title: 'Jogo de quarta-feira termina empatado',
+            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Cumque voluptate soluta debitis perferendis totam eius aliquam voluptatum minus sequi atque! Magnam quas incidunt eveniet eius doloremque tempora repudiandae, eos unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quam praesentium ipsum dolor sit amet consectetur adipisicing elit.Cumque ipsum dolor sit amet consectetur adipisicing elit.Cumque ipsum dolor sit amet consectetur adipisicing elit.Cumque', 
+            date: '2020-02-11',
+            img:'news2.jpg',
+            imgInfo: 'Notícia 2'
+        },
+        {
+            id: 3,
+            title: 'Jogo de quarta-feira termina empatado',
+            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Cumque voluptate soluta debitis perferendis totam eius aliquam voluptatum minus sequi atque! Magnam quas incidunt eveniet eius doloremque tempora repudiandae, eos unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quam praesentium ipsum dolor sit amet consectetur adipisicing elit.Cumque ipsum dolor sit amet consectetur adipisicing elit.Cumque ipsum dolor sit amet consectetur adipisicing elit.Cumque', 
+            date: '2020-11-03',
+            img:'news3.jpg',
+            imgInfo: 'Notícia 3'
+        },
+        ]
     }
    
 }
