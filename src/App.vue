@@ -6,7 +6,6 @@
     />
 
     <HcodeSection 
-    :championship="championship"
     :current-component="currentSectionComponent"
     />
     
@@ -36,7 +35,7 @@ export default {
   methods: {
 
     ...mapActions([ 'changeChampionship']),
-    
+
     changeComponent(value) {
 
       let component;

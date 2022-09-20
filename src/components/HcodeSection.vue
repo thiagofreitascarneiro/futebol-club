@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="col-6">
-                    <HcodeInput v-model="myClub" />
+                    <HcodeInput  />
                 </div>
 
             </div>
