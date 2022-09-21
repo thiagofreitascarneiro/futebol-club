@@ -5,9 +5,7 @@
     @change-component="changeComponent"
     />
 
-    <HcodeSection 
-    :current-component="currentSectionComponent"
-    />
+    <HcodeSection/>
     
     <HcodeFooter />
   </div>
@@ -28,8 +26,7 @@ export default {
   },
   data() {
     return {
-      championship: 'Campeonato Brasileiro',
-      currentSectionComponent: 'HcodesectionBanner'
+      
     }   
   },
   methods: {

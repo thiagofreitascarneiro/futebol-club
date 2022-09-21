@@ -9,9 +9,7 @@
         
         </div>
 
-        <component :is="currentComponent">
-
-        </component>
+        <router-view></router-view>
 
     
         <div class="container">
@@ -35,14 +33,13 @@
 </template>
 
 <script>
-import HcodeSectionBanner from './HcodeSectionBanner'
+
 import HcodeInput from './HcodeInput'
 import { mapGetters } from 'vuex'
 
 export default {
     components: {
-        HcodeSectionBanner,
-        HcodeSectionNews: () => import('./HcodeSectionNews.vue'),
+       
         HcodeInput
     },
     data() {
