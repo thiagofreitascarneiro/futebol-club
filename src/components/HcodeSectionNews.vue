@@ -1,6 +1,6 @@
 <template>
 
-    <section>
+    <section class="section-news">
 
         <div class="container">
             
@@ -14,7 +14,7 @@
             >
 
                 <template v-slot:title>
-                    <h2>{{ notice.title }}</h2>
+                    <h2 @click="goToPage('/notice')">{{ notice.title }}</h2>
                 </template>
                 <p>{{ notice.content | truncate(200) }}</p>
             </HcodeSectionNewsIndividual>
@@ -45,13 +45,19 @@ export default {
         ...mapGetters({
             news: 'getNews'
         })
+    },
+    methods: {
+        goToPage(page) {
+            this.$router.push(page);
+        }
     }
    
 }
 </script>
 
-<style scoped>
-section {
+<style>
+
+.section-news {
     padding: 50px 0;
     margin-top: 25px;
     background-color: #F37520;

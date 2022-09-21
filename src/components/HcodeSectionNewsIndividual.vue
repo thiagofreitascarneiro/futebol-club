@@ -1,6 +1,6 @@
 <template>
 
-    <div class="row">
+    <div class="row div-news">
 
         <div class="col-3">
 
@@ -48,17 +48,17 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 
-.row {
+.div-news {
     margin-bottom: 30px;
 }
 
-img {
+.div-news img {
     width: 100%;
 }
 
-h2 {
+.div-news h2 {
     cursor: pointer;
     color: #FFF;
 }
