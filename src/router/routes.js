@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import Home from './../components/HcodeSectionBanner'
 import News from './../components/HcodeSectionNews'
 import Notice from './../components/HcodeSectionNewsNotice'
+import HcodeTo404 from './../components/HcodeTo404'
 
 Vue.use(VueRouter)
 
@@ -23,6 +24,9 @@ export default new VueRouter({
     }, {
         path: '/admin',
         redirect: '/'
+    }, {
+        path: '*',
+        component: HcodeTo404
     }
 ]
 })
